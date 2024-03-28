@@ -81,8 +81,7 @@ st.sidebar.markdown("""
 
 st.sidebar.markdown("### Useful Links")
 st.sidebar.markdown("- [GitHub Repository](https://github.com/navadkarsujit/Airline-Passenger-Satisfaction-ML-Project)")
-st.sidebar.markdown("### Contributors")
-st.sidebar.markdown("* Sujit Navadkar")
+
 
 st.markdown('<div class="title">Airline Passenger Satisfaction <br> Prediction</div>', unsafe_allow_html=True)
 
