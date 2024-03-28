@@ -120,7 +120,6 @@ def main():
             ArrivalDelay=st.number_input('Arrival Delay in Minutes')
 
     with st.container(border=True):
-
         st.markdown('<div class="header1">Please rate your experience (from 1 to 5 stars)</div>', unsafe_allow_html=True)
         col1, col2, col3, col4=st.columns(4)
         with col1:
