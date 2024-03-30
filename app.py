@@ -5,8 +5,8 @@ import numpy as np
 pickle_sc=open('scaling.pkl', 'rb')
 scaling=pickle.load(pickle_sc)
 
-pickle_in=open('LRmodel.pkl', 'rb')
-LRmodel=pickle.load(pickle_in)
+pickle_in=open('DTmodel.pkl', 'rb')
+DTmodel=pickle.load(pickle_in)
 
 st.set_page_config(page_title='Airline Passenger Satisfaction', layout='centered', initial_sidebar_state = 'expanded')
 
@@ -77,6 +77,7 @@ st.sidebar.markdown("""
     </div>
     <div class="header-info">
             The model considers various factors such as flight distance, service ratings, and passenger demographics.
+            DecisionTreeClassifier model is used for prediction.
 """, unsafe_allow_html=True)
 
 st.sidebar.markdown("### Useful Links")
@@ -256,7 +257,7 @@ def main():
             scalingdata=scaling.transform(data)
 
             # prediction
-            report=LRmodel.predict(scalingdata)
+            report=DTmodel.predict(scalingdata)
             if report==1:
                 st.success("Congratulations! The passenger is highly satisfied with the airline service.")
             elif report==0:
